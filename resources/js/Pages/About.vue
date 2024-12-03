@@ -4,7 +4,6 @@ defineProps({
 });
 </script>
 <template>
-  <div>
-    <h1>About Page {{ user }}</h1>
-  </div>
+  <Head title="About" />
+  <h1>About Page {{ user }}</h1>
 </template>
