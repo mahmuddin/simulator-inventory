@@ -1,6 +1,4 @@
-<script setup>
-import { Link, Head } from "@inertiajs/vue3";
-</script>
+<script setup></script>
 <template>
   <Head>
     <meta
@@ -13,8 +11,9 @@ import { Link, Head } from "@inertiajs/vue3";
     <header class="bg-indigo-500 text-white">
       <nav class="flex items-center justify-between p-4 max-w-screen-lg mx-auto">
         <div class="space-x-6">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
+          <!-- <Link href="/">Home</Link>
+          <Link href="/about">About</Link> -->
+          <Link :href="route('home')">Home</Link>
         </div>
       </nav>
     </header>
