@@ -21,7 +21,16 @@
           >
         </div>
 
-        <div v-if="$page.props.auth.user" class="space-x-6">
+        <div v-if="$page.props.auth.user" class="space-x-6 flex">
+          <img
+            class="avatar"
+            :src="
+              $page.props.auth.user.avatar
+                ? 'storage/' + $page.props.auth.user.avatar
+                : 'storage/avatars/default.png'
+            "
+            alt=""
+          />
           <Link
             :href="route('dashboard')"
             class="nav-link"
