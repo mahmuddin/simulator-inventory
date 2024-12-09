@@ -39,7 +39,7 @@ class AuthController extends Controller
         Auth::login($user);
 
         // Redirect
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard')->with('greet', 'Welcome to Laravel Inertia Vue app');
     }
 
     public function login(Request $request)

@@ -41,7 +41,7 @@ const submit = () => {
         >
         <input type="file" id="avatar" @input="change" hidden />
         <img
-          :src="form.avatar ?? 'storage/avatars/default.png'"
+          :src="form.preview ?? 'storage/avatars/default.png'"
           class="object-cover w-28 h-28"
         />
       </div>
