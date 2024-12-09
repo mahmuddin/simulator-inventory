@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 // use Inertia\Inertia;
 
 // Route::get('/', function () {
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //// shorthand work only when method is get
 // Route::inertia('/about', 'About', ['user' => 'Mike'])->name('about');
 
-Route::inertia('/', 'Home',)->name('home');
+Route::inertia('/', 'Home', ['users' => User::paginate(5)])->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::inertia('/dashboard', 'Dashboard',)->name('dashboard');
