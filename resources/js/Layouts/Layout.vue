@@ -17,6 +17,7 @@
         </div>
 
         <div class="space-x-6">
+          <Link :href="route('login')" class="nav-link">Login</Link>
           <Link :href="route('register')" class="nav-link">Register</Link>
         </div>
       </nav>

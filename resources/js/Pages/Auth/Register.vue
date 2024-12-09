@@ -45,7 +45,7 @@ const submit = () => {
 
     <div>
       <p class="text-slate-600 mb-2">
-        Already have an account? <a href="#" class="text-link">Login</a>
+        Already have an account? <a :href="route('login')" class="text-link">Login</a>
       </p>
       <button class="primary-btn" :disabled="form.processing">Register</button>
     </div>
